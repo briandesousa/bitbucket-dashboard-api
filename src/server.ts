@@ -10,6 +10,7 @@ import * as errorHandler from "errorhandler";
  * Controllers (route handlers).
  */
 import * as repositoryController from "./controllers/repository";
+import * as projectController from "./controllers/project";
 
 /**
  * Create Express server.
@@ -28,6 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
  * Primary app routes.
  */
 app.get("/repository", repositoryController.getRepositories);
+app.get("/project", projectController.getProject );
 
 /**
  * Error Handler. Provides full stack - remove for production
