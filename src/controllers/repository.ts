@@ -17,9 +17,8 @@ export let getRepositories = (req: Request, res: Response) => {
       res.send("Error received: " + err);
     } else {
       console.log("response: " + response);
-      res.send(JSON.stringify(response.body));
+      res.send(response.body);
     }
   });
 
-  
 };
